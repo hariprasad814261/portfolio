@@ -3,7 +3,7 @@
 <head>
   <!-- ## SECTION: METADATA_AND_FONTS -->
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>HARI // Founder of pennyworth.ai — Autonomous AI & Web Systems</title>
   <meta name="description" content="Cinematic WebGL portfolio of Hari, Founder of pennyworth.ai. Engineering autonomous AI Operating Systems (AIOS) and high-end interactive digital experiences." />
 
@@ -2158,13 +2158,15 @@
     .faq-answer-panel {
       max-height: 0;
       overflow: hidden;
-      transition: max-height 0.45s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.35s ease, padding 0.35s ease;
+      visibility: hidden;
+      transition: max-height 0.45s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.35s ease, padding 0.35s ease, visibility 0.45s ease;
       opacity: 0;
       padding: 0 2rem;
     }
 
     .faq-item.active .faq-answer-panel {
       max-height: 800px;
+      visibility: visible;
       opacity: 1;
       padding: 0.2rem 2rem 2rem;
     }
@@ -2537,9 +2539,11 @@
           </div>
         </div>
       </div>
-    
-    </section>  <!-- ## SECTION: TRANSMISSION_01 -->
+    </section>
+
+    <!-- ## SECTION: TRANSMISSION_01 -->
     <section id="transmission" class="section-transmission">
+      <div class="section-tag"><span class="txt-red">01</span> — <span class="txt-white">TRANSMISSION // DIRECTIVE</span></div>
       <!-- Exact Celestial White Light Star Flare from Video & Screenshot -->
       <div class="optic-flare-stage" id="optic-flare-stage">
         <div class="flare-ray-horizontal"></div>
@@ -2572,7 +2576,7 @@
 
     <!-- ## SECTION: BY_THE_NUMBERS_02 -->
     <section id="numbers" class="section-numbers">
-      <div class="section-tag"><span class="txt-red">01</span> — <span class="txt-white">BY THE NUMBERS</span></div>
+      <div class="section-tag"><span class="txt-red">02</span> — <span class="txt-white">BY THE NUMBERS</span></div>
       <div class="telemetry-grid">
         <div class="telemetry-card">
           <div class="telemetry-val hover-shader-target txt-white" data-counter="100" data-suffix="%">100%</div>
@@ -2666,7 +2670,7 @@
         </div>
 
         <div class="instrument-text-block">
-          <div class="section-tag"><span class="txt-red">02</span> — <span class="txt-white">THE ARCHITECT & SYSTEMS</span></div>
+          <div class="section-tag"><span class="txt-red">03</span> — <span class="txt-white">THE ARCHITECT & SYSTEMS</span></div>
           <h2 class="hover-shader-target">
             <span class="txt-black">DUAL ARCHITECTURE:</span> <span class="txt-white">AUTONOMOUS AI +</span> <span class="txt-red">HIGH-END WEB</span>
           </h2>
@@ -2737,7 +2741,7 @@
 
           <!-- Card 3: Dental Clinic Care -->
           <a href="https://dental-clinic-ivory-gamma.vercel.app/" target="_blank" rel="noopener noreferrer" class="catalogue-card">
-            <img src="/projects/dental website.png" onerror="this.src='/projects/dentalclinic.png'" alt="Dental Clinic Care Portal" class="catalogue-card-img" />
+            <img src="/projects/dental%20website.png" onerror="this.src='/projects/dentalclinic.png'" alt="Dental Clinic Care Portal" class="catalogue-card-img" />
             <div class="catalogue-card-overlay"></div>
             <div class="catalogue-card-content">
               <div class="catalogue-card-telemetry">
@@ -2808,6 +2812,7 @@
 
     <!-- ## SECTION: DEEP_FIELD_IMPACT_05 -->
     <section id="deep-impact" class="section-deep-impact">
+      <div class="section-tag"><span class="txt-red">05</span> — <span class="txt-white">SCALE & IMPACT</span></div>
       <h2 class="impact-title hover-shader-target">
         <span class="txt-black">THE WORK</span><br />
         <span class="txt-white">MAKES ITS OWN</span> <span class="txt-red">NOISE.</span>
@@ -2844,7 +2849,7 @@
               </svg>
             </div>
           </button>
-          <div class="faq-answer-panel">
+          <div class="faq-answer-panel" aria-hidden="false">
             <div class="faq-answer-content">
               An <strong>AIOS</strong> is an integrated network of autonomous intelligence layers, sub-180ms real-time voice agents, and background orchestration workflows engineered to replace manual operational bottlenecks. Rather than fragmented chatbots or brittle zapier rules, an AIOS manages inbound customer triage, dynamic scheduling, instant CRM updates, and multi-tier business workflows with human-grade reasoning and zero latency fatigue.
               
@@ -2878,7 +2883,7 @@
               </svg>
             </div>
           </button>
-          <div class="faq-answer-panel">
+          <div class="faq-answer-panel" aria-hidden="true">
             <div class="faq-answer-content">
               <strong>Relentless focus and zero craft dilution.</strong> Building ultra-responsive AI systems and bespoke digital flagship platforms requires intense architectural immersion, performance tuning, and custom model distillation. By refusing mass-agency assembly lines and deliberately maintaining a 2–3 client ceiling, every engagement is architected directly by me with obsessive craftsmanship and 24/7 dedicated support.
             </div>
@@ -2899,7 +2904,7 @@
               </svg>
             </div>
           </button>
-          <div class="faq-answer-panel">
+          <div class="faq-answer-panel" aria-hidden="true">
             <div class="faq-answer-content">
               For frontend web experiences: <strong>WebGL, Three.js custom GLSL shaders, GSAP kinetic engines, modern TypeScript, and pure CSS glassmorphism</strong> optimized for 60fps across all devices. For AI & Voice: <strong>Low-latency WebRTC audio streaming, OpenAI Realtime API & Anthropic Claude frontier models, LangGraph agent clusters, and edge serverless runtimes</strong> ensuring worldwide sub-second responsiveness.
             </div>
@@ -2920,7 +2925,7 @@
               </svg>
             </div>
           </button>
-          <div class="faq-answer-panel">
+          <div class="faq-answer-panel" aria-hidden="true">
             <div class="faq-answer-content">
               Turnaround is exceptionally fast: standard builds ship in <strong>2 to 4 weeks</strong>. Week 1 is focused on architectural diagnosis and telemetry mapping. Weeks 2–3 deliver functional interactive prototypes and agent voice simulations. Week 4 executes load testing, CRM connectors, security hardening, and live deployment. Accelerated sprints are also available for urgent time-to-market initiatives.
             </div>
@@ -2941,7 +2946,7 @@
               </svg>
             </div>
           </button>
-          <div class="faq-answer-panel">
+          <div class="faq-answer-panel" aria-hidden="true">
             <div class="faq-answer-content">
               <strong>Yes, native bidirectional integration is standard.</strong> We interface directly with Google Calendar, Notion, HubSpot, Salesforce, Airtable, PostgreSQL, Supabase, Stripe, and custom REST/GraphQL endpoints. If your company uses proprietary internal software, custom encrypted webhook middleware is developed to guarantee zero data loss and automated reconciliation.
             </div>
@@ -2962,7 +2967,7 @@
               </svg>
             </div>
           </button>
-          <div class="faq-answer-panel">
+          <div class="faq-answer-panel" aria-hidden="true">
             <div class="faq-answer-content">
               Transmission can be initiated directly via email at <a href="mailto:pennyworthxai@gmail.com?subject=Strategic%20Inquiry%20-%20Pennyworth.ai" class="faq-link">pennyworthxai@gmail.com</a> with a brief description of your operational goals or technical roadmap. All inbound inquiries receive an engineering assessment and capacity determination within <strong>24 hours</strong>.
             </div>
@@ -2974,7 +2979,7 @@
 
     <!-- ## SECTION: THE_CROSSING_07 -->
     <section id="crossing-outro" class="section-crossing">
-      <div class="section-tag"><span class="txt-red">THE CROSSING AWAITS</span> // <span class="txt-white">INITIATE TRANSMISSION</span></div>
+      <div class="section-tag"><span class="txt-red">07</span> — <span class="txt-white">THE CROSSING AWAITS // INITIATE TRANSMISSION</span></div>
       <h2 class="crossing-headline hover-shader-target">
         <span class="txt-white">LEAVE</span> <span class="txt-red">THE MAP.</span>
       </h2>
@@ -2996,8 +3001,15 @@
     /* ==========================================================================
        1. THREE.JS DEEP-SPACE SPIRAL GALAXY, MINI-GALAXIES & CONTINUOUS ZOOM
        ========================================================================== */
-    const container = document.getElementById('webgl-container');
-    const scene = new THREE.Scene();
+    function initWebGLBackground() {
+      try {
+        if (typeof THREE === 'undefined') {
+          console.warn('Three.js library is not available. Using CSS cosmic backdrop.');
+          return;
+        }
+        const container = document.getElementById('webgl-container');
+        if (!container) return;
+        const scene = new THREE.Scene();
     scene.fog = new THREE.FogExp2(0x020208, 0.0009);
 
     const camera = new THREE.PerspectiveCamera(60, window.innerWidth / window.innerHeight, 0.1, 3500);
@@ -3468,6 +3480,11 @@
       renderer.render(scene, camera);
     }
     animate();
+      } catch (err) {
+        console.warn('WebGL initialization failed or unsupported, running with standard background:', err);
+      }
+    }
+    initWebGLBackground();
 
 
     /* ==========================================================================
@@ -3537,6 +3554,8 @@
     }
 
     function runFightClubIntro() {
+      if (fcTimer) clearInterval(fcTimer);
+      if (quoteInterval) clearInterval(quoteInterval);
       isIntroFinished = false;
       fcProgress = 0;
       fcIntro.classList.remove('loaded', 'exploding');
@@ -3803,6 +3822,7 @@
     const faqItems = document.querySelectorAll('.faq-item');
     faqItems.forEach(item => {
       const trigger = item.querySelector('.faq-trigger');
+      const panel = item.querySelector('.faq-answer-panel');
       if (!trigger) return;
 
       trigger.addEventListener('click', () => {
@@ -3814,6 +3834,8 @@
             otherItem.classList.remove('active');
             const otherBtn = otherItem.querySelector('.faq-trigger');
             if (otherBtn) otherBtn.setAttribute('aria-expanded', 'false');
+            const otherPanel = otherItem.querySelector('.faq-answer-panel');
+            if (otherPanel) otherPanel.setAttribute('aria-hidden', 'true');
           }
         });
 
@@ -3821,9 +3843,11 @@
         if (isOpen) {
           item.classList.remove('active');
           trigger.setAttribute('aria-expanded', 'false');
+          if (panel) panel.setAttribute('aria-hidden', 'true');
         } else {
           item.classList.add('active');
           trigger.setAttribute('aria-expanded', 'true');
+          if (panel) panel.setAttribute('aria-hidden', 'false');
         }
 
         // Smoothly refresh ScrollTrigger after height transition

@@ -61,8 +61,8 @@ const projects: Project[] = [
     client: 'Healthcare & Medical',
     description:
       'A clean, modern healthcare portal and dental clinic web platform featuring streamlined patient booking, transparent pricing, and interactive service overviews.',
-    imageUrl: '/projects/dentalclinic.png',
-    liveLink: 'https://dental-clinic-b3l5ot5am-hariprasad814261-5030s-projects.vercel.app/',
+    imageUrl: '/projects/dental%20website.png',
+    liveLink: 'https://dental-clinic-ivory-gamma.vercel.app/',
   },
 ];
 
