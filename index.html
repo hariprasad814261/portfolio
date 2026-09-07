@@ -49,6 +49,13 @@
       -moz-osx-font-smoothing: grayscale;
     }
 
+    img {
+      -webkit-user-drag: none;
+      user-select: none;
+      -webkit-user-select: none;
+      -webkit-touch-callout: none;
+    }
+
     html, body {
       width: 100%;
       min-height: 100%;
@@ -1509,7 +1516,7 @@
     .architect-card-container {
       position: relative;
       width: 100%;
-      height: 520px;
+      height: 590px;
       perspective: 1200px;
     }
 
@@ -1555,14 +1562,29 @@
       width: 100%;
       height: 100%;
       object-fit: cover;
-      object-position: center 20%;
-      filter: contrast(1.08) brightness(0.92);
+      object-position: center 25%;
+      filter: contrast(1.06) brightness(0.96);
       transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1), filter 0.8s ease;
+      pointer-events: none;
+      user-select: none;
+      -webkit-user-select: none;
+      -webkit-user-drag: none;
+      -webkit-touch-callout: none;
+    }
+
+    .image-protection-shield {
+      position: absolute;
+      inset: 0;
+      z-index: 6;
+      pointer-events: auto;
+      user-select: none;
+      -webkit-user-drag: none;
+      background: transparent;
     }
 
     .architect-card-3d:hover .architect-photo-img {
-      filter: contrast(1.12) brightness(1);
-      transform: scale(1.04);
+      filter: contrast(1.1) brightness(1.02);
+      transform: scale(1.03);
     }
 
     .instrument-img {
@@ -1653,12 +1675,12 @@
       position: absolute;
       inset: 0;
       pointer-events: none;
-      padding: 1.75rem;
+      padding: 1.5rem;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
       z-index: 8;
-      background: linear-gradient(to top, rgba(2, 6, 23, 0.92) 0%, rgba(2, 6, 23, 0.25) 45%, rgba(2, 6, 23, 0.65) 100%);
+      background: linear-gradient(to top, rgba(2, 6, 23, 0.88) 0%, rgba(2, 6, 23, 0.22) 20%, transparent 36%, transparent 82%, rgba(2, 6, 23, 0.45) 100%);
       transform: translateZ(30px);
     }
 
@@ -1697,7 +1719,15 @@
     .architect-hud-bottom {
       display: flex;
       flex-direction: column;
-      gap: 0.4rem;
+      gap: 0.3rem;
+      padding: 0.75rem 1.15rem;
+      background: rgba(8, 12, 24, 0.76);
+      backdrop-filter: blur(14px);
+      border: 1px solid rgba(255, 255, 255, 0.09);
+      border-radius: 14px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+      width: fit-content;
+      max-width: 100%;
     }
 
     .architect-hud-name {
@@ -1889,19 +1919,25 @@
       width: 100%;
       height: 100%;
       object-fit: cover;
+      object-position: top center;
+      z-index: 1;
       transition: transform 1.2s cubic-bezier(0.16, 1, 0.3, 1), filter 0.8s ease;
-      filter: brightness(0.8) contrast(1.08);
+      filter: brightness(1.02) contrast(1.04);
+      pointer-events: none;
+      user-select: none;
+      -webkit-user-select: none;
+      -webkit-user-drag: none;
     }
 
     .catalogue-card:hover .catalogue-card-img {
-      transform: scale(1.06);
-      filter: brightness(0.95) contrast(1.12);
+      transform: scale(1.05);
+      filter: brightness(1.12) contrast(1.08);
     }
 
     .catalogue-card-overlay {
       position: absolute;
       inset: 0;
-      background: linear-gradient(to top, rgba(2, 4, 10, 0.96) 0%, rgba(2, 4, 10, 0.65) 55%, rgba(2, 4, 10, 0.15) 100%);
+      background: linear-gradient(to top, rgba(2, 4, 10, 0.92) 0%, rgba(2, 4, 10, 0.42) 38%, transparent 68%);
       z-index: 2;
       pointer-events: none;
     }
@@ -2456,7 +2492,7 @@
         <span class="fc-progress-val" id="fc-progress-val">CALIBRATING 00%</span>
       </div>
 
-      <a href="mailto:pennyworthxai@gmail.com?subject=Transmission%20Initiation%20-%20Pennyworth.ai" class="fc-email-badge" style="font-family: var(--font-mono); font-size: 0.68rem; letter-spacing: 0.14em; color: #ffffff; text-decoration: none; text-transform: uppercase; background: rgba(239, 68, 68, 0.18); border: 1px solid rgba(239, 68, 68, 0.5); border-radius: 9999px; padding: 0.35rem 0.8rem; display: inline-flex; align-items: center; gap: 0.4rem;">
+      <a href="mailto:pennyworthxai@gmail.com" class="fc-email-badge" style="font-family: var(--font-mono); font-size: 0.68rem; letter-spacing: 0.14em; color: #ffffff; text-decoration: none; text-transform: uppercase; background: rgba(239, 68, 68, 0.18); border: 1px solid rgba(239, 68, 68, 0.5); border-radius: 9999px; padding: 0.35rem 0.8rem; display: inline-flex; align-items: center; gap: 0.4rem;">
         <span style="color:#ef4444;">✉</span> pennyworthxai@gmail.com
       </a>
 
@@ -2484,12 +2520,12 @@
       <a href="#faqs" class="glass-nav-link">PROTOCOLS</a>
     </nav>
     <div class="glass-nav-actions">
-      <a href="mailto:pennyworthxai@gmail.com?subject=Strategic%20Inquiry%20-%20Pennyworth.ai" class="glass-nav-email-pill" title="Company Email: pennyworthxai@gmail.com">
+      <a href="mailto:pennyworthxai@gmail.com" class="glass-nav-email-pill" title="Company Email: pennyworthxai@gmail.com">
         <span class="nav-email-badge">COMPANY</span>
         <span class="nav-email-icon">✉</span>
         <span class="nav-email-text">pennyworthxai@gmail.com</span>
       </a>
-      <a href="mailto:pennyworthxai@gmail.com?subject=Project%20Initiation%20-%20Pennyworth.ai" class="glass-nav-cta">INITIATE ↗</a>
+      <a href="mailto:pennyworthxai@gmail.com" class="glass-nav-cta">INITIATE ↗</a>
       <button class="glass-nav-intro-btn" id="btn-replay-intro" title="Replay 35mm Fight Club Intro">35MM ✦</button>
     </div>
   </header>
@@ -2503,7 +2539,7 @@
       <span class="hud-crossing-pct" id="crossing-pct">00</span>
     </div>
     <div class="hud-email-bar">
-      <a href="mailto:pennyworthxai@gmail.com?subject=Transmission%20Inquiry%20-%20Pennyworth.ai" class="hud-email-link" title="Company Official Transmission">
+      <a href="mailto:pennyworthxai@gmail.com" class="hud-email-link" title="Company Official Transmission">
         <span class="hud-email-pulse"></span>
         <span class="hud-email-label">COMPANY DISPATCH:</span>
         <span class="hud-email-address">pennyworthxai@gmail.com</span>
@@ -2532,10 +2568,10 @@
       <div class="hero-ticker">
         <div class="ticker-track">
           <div class="ticker-item hover-shader-target">
-            <span class="txt-white">FOUNDER & AI ARCHITECT</span> <span class="ticker-sparkle">✦</span> <span class="txt-red">24/7 AUTONOMOUS SYSTEMS</span> <span class="ticker-sparkle">✦</span> <a href="mailto:pennyworthxai@gmail.com?subject=Company%20Inquiry" style="color:inherit;text-decoration:none;"><span class="txt-white">COMPANY EMAIL:</span> <span class="txt-red">PENNYWORTHXAI@GMAIL.COM</span></a> <span class="ticker-sparkle">✦</span> <span class="txt-black">BESPOKE WEB EXPERIENCES</span> <span class="ticker-sparkle">✦</span> <span class="txt-white">PENNYWORTH.AI</span> <span class="ticker-sparkle">✦</span>
+            <span class="txt-white">FOUNDER & AI ARCHITECT</span> <span class="ticker-sparkle">✦</span> <span class="txt-red">24/7 AUTONOMOUS SYSTEMS</span> <span class="ticker-sparkle">✦</span> <a href="mailto:pennyworthxai@gmail.com" style="color:inherit;text-decoration:none;"><span class="txt-white">COMPANY EMAIL:</span> <span class="txt-red">PENNYWORTHXAI@GMAIL.COM</span></a> <span class="ticker-sparkle">✦</span> <span class="txt-black">BESPOKE WEB EXPERIENCES</span> <span class="ticker-sparkle">✦</span> <span class="txt-white">PENNYWORTH.AI</span> <span class="ticker-sparkle">✦</span>
           </div>
           <div class="ticker-item hover-shader-target">
-            <span class="txt-white">FOUNDER & AI ARCHITECT</span> <span class="ticker-sparkle">✦</span> <span class="txt-red">24/7 AUTONOMOUS SYSTEMS</span> <span class="ticker-sparkle">✦</span> <a href="mailto:pennyworthxai@gmail.com?subject=Company%20Inquiry" style="color:inherit;text-decoration:none;"><span class="txt-white">COMPANY EMAIL:</span> <span class="txt-red">PENNYWORTHXAI@GMAIL.COM</span></a> <span class="ticker-sparkle">✦</span> <span class="txt-black">BESPOKE WEB EXPERIENCES</span> <span class="ticker-sparkle">✦</span> <span class="txt-white">PENNYWORTH.AI</span> <span class="ticker-sparkle">✦</span>
+            <span class="txt-white">FOUNDER & AI ARCHITECT</span> <span class="ticker-sparkle">✦</span> <span class="txt-red">24/7 AUTONOMOUS SYSTEMS</span> <span class="ticker-sparkle">✦</span> <a href="mailto:pennyworthxai@gmail.com" style="color:inherit;text-decoration:none;"><span class="txt-white">COMPANY EMAIL:</span> <span class="txt-red">PENNYWORTHXAI@GMAIL.COM</span></a> <span class="ticker-sparkle">✦</span> <span class="txt-black">BESPOKE WEB EXPERIENCES</span> <span class="ticker-sparkle">✦</span> <span class="txt-white">PENNYWORTH.AI</span> <span class="ticker-sparkle">✦</span>
           </div>
         </div>
       </div>
@@ -2623,7 +2659,8 @@
 
               <!-- View 1: The Architect (Hari's Professional Portrait) -->
               <div class="architect-view active" id="view-architect">
-                <img src="/my_professional_photo.jpg" alt="Hari — Founder of pennyworth.ai & Lead AI Architect" class="architect-photo-img" />
+                <img src="/my_professional_photo.jpg" alt="Hari — Founder of pennyworth.ai & Lead AI Architect" class="architect-photo-img" draggable="false" oncontextmenu="return false;" />
+                <div class="image-protection-shield" oncontextmenu="return false;"></div>
                 <div class="architect-hud-content">
                   <div class="architect-hud-top">
                     <span class="architect-badge">
@@ -2707,7 +2744,7 @@
         <div class="catalogue-horizontal-track" id="catalogue-track">
           <!-- Card 1: Ample.ai Voice OS -->
           <a href="https://merry-blancmange-dbfa0d.netlify.app/" target="_blank" rel="noopener noreferrer" class="catalogue-card">
-            <img src="/projects/ample.ai.png" alt="Ample.ai Voice OS" class="catalogue-card-img" />
+            <img src="/projects/ample.ai.png" alt="Ample.ai Voice OS" class="catalogue-card-img" draggable="false" oncontextmenu="return false;" />
             <div class="catalogue-card-overlay"></div>
             <div class="catalogue-card-content">
               <div class="catalogue-card-telemetry">
@@ -2724,7 +2761,7 @@
 
           <!-- Card 2: Mr. Moglee's Restaurant -->
           <a href="https://mrmogglee.netlify.app/" target="_blank" rel="noopener noreferrer" class="catalogue-card">
-            <img src="/projects/mrmogleewebsite.png" alt="Mr. Moglee's Restaurant" class="catalogue-card-img" />
+            <img src="/projects/mrmogleewebsite.png" alt="Mr. Moglee's Restaurant" class="catalogue-card-img" draggable="false" oncontextmenu="return false;" />
             <div class="catalogue-card-overlay"></div>
             <div class="catalogue-card-content">
               <div class="catalogue-card-telemetry">
@@ -2741,7 +2778,7 @@
 
           <!-- Card 3: Dental Clinic Care -->
           <a href="https://dental-clinic-ivory-gamma.vercel.app/" target="_blank" rel="noopener noreferrer" class="catalogue-card">
-            <img src="/projects/dental%20website.png" onerror="this.src='/projects/dentalclinic.png'" alt="Dental Clinic Care Portal" class="catalogue-card-img" />
+            <img src="/projects/dental%20website.png" onerror="this.src='/projects/dentalclinic.png'" alt="Dental Clinic Care Portal" class="catalogue-card-img" draggable="false" oncontextmenu="return false;" />
             <div class="catalogue-card-overlay"></div>
             <div class="catalogue-card-content">
               <div class="catalogue-card-telemetry">
@@ -2758,7 +2795,7 @@
 
           <!-- Card 4: Matcha Tea -->
           <a href="https://matchatea1.netlify.app/" target="_blank" rel="noopener noreferrer" class="catalogue-card">
-            <img src="/projects/matchawebsite.png" alt="Matcha Tea Storefront" class="catalogue-card-img" />
+            <img src="/projects/matchawebsite.png" alt="Matcha Tea Storefront" class="catalogue-card-img" draggable="false" oncontextmenu="return false;" />
             <div class="catalogue-card-overlay"></div>
             <div class="catalogue-card-content">
               <div class="catalogue-card-telemetry">
@@ -2775,7 +2812,7 @@
 
           <!-- Card 5: Porsche Showcase -->
           <a href="https://porschewebsite1.netlify.app/" target="_blank" rel="noopener noreferrer" class="catalogue-card">
-            <img src="/projects/porchewebsite.png" alt="Porsche Showcase" class="catalogue-card-img" />
+            <img src="/projects/porchewebsite.png" alt="Porsche Showcase" class="catalogue-card-img" draggable="false" oncontextmenu="return false;" />
             <div class="catalogue-card-overlay"></div>
             <div class="catalogue-card-content">
               <div class="catalogue-card-telemetry">
@@ -2792,7 +2829,7 @@
 
           <!-- Card 6: Keyboard Animation -->
           <a href="https://keyboardanimation1.netlify.app/" target="_blank" rel="noopener noreferrer" class="catalogue-card">
-            <img src="/projects/keyboardanimation.png" alt="Keyboard Animation 3D" class="catalogue-card-img" />
+            <img src="/projects/keyboardanimation.png" alt="Keyboard Animation 3D" class="catalogue-card-img" draggable="false" oncontextmenu="return false;" />
             <div class="catalogue-card-overlay"></div>
             <div class="catalogue-card-content">
               <div class="catalogue-card-telemetry">
@@ -2861,7 +2898,7 @@
                 <div class="faq-contact-desc">
                   To discuss enterprise AIOS architecture, evaluate operational automation roadmaps, or send messages directly to my engineering inbox:
                 </div>
-                <a href="mailto:pennyworthxai@gmail.com?subject=Professional%20Inquiry%20-%20AIOS%20Architecture" class="faq-contact-link" title="Direct Email to Hari">
+                <a href="mailto:pennyworthxai@gmail.com" class="faq-contact-link" title="Direct Email to Hari">
                   ✉ pennyworthxai@gmail.com ↗
                 </a>
               </div>
@@ -2969,7 +3006,7 @@
           </button>
           <div class="faq-answer-panel" aria-hidden="true">
             <div class="faq-answer-content">
-              Transmission can be initiated directly via email at <a href="mailto:pennyworthxai@gmail.com?subject=Strategic%20Inquiry%20-%20Pennyworth.ai" class="faq-link">pennyworthxai@gmail.com</a> with a brief description of your operational goals or technical roadmap. All inbound inquiries receive an engineering assessment and capacity determination within <strong>24 hours</strong>.
+              Transmission can be initiated directly via email at <a href="mailto:pennyworthxai@gmail.com" class="faq-link">pennyworthxai@gmail.com</a> with a brief description of your operational goals or technical roadmap. All inbound inquiries receive an engineering assessment and capacity determination within <strong>24 hours</strong>.
             </div>
           </div>
         </div>
@@ -2983,12 +3020,12 @@
       <h2 class="crossing-headline hover-shader-target">
         <span class="txt-white">LEAVE</span> <span class="txt-red">THE MAP.</span>
       </h2>
-      <a href="mailto:pennyworthxai@gmail.com?subject=Project%20Inquiry%20-%20Pennyworth.ai" class="crossing-cta-btn hover-shader-target">
+      <a href="mailto:pennyworthxai@gmail.com" id="btn-begin-journey" class="crossing-cta-btn hover-shader-target" title="Send email to pennyworthxai@gmail.com">
         Begin the journey ✦
       </a>
       <div class="crossing-direct-dispatch">
         <span>DIRECT DISPATCH // </span>
-        <a href="mailto:pennyworthxai@gmail.com?subject=Direct%20Inquiry%20-%20Pennyworth.ai" class="crossing-email-link">pennyworthxai@gmail.com</a>
+        <a href="mailto:pennyworthxai@gmail.com" class="crossing-email-link">pennyworthxai@gmail.com</a>
       </div>
       <div class="footer-credits hover-shader-target">
         <span class="txt-red">HARI PRASAD</span> // <span class="txt-white">FOUNDER & AI ARCHITECT</span> // <span class="txt-black">ALL RIGHTS RESERVED</span>
@@ -4058,6 +4095,21 @@
         navTicking = true;
       }
     }, { passive: true });
+
+    // "Begin the Journey" direct redirection handler
+    const btnBeginJourney = document.getElementById('btn-begin-journey');
+    if (btnBeginJourney) {
+      btnBeginJourney.addEventListener('click', (e) => {
+        e.preventDefault();
+        const targetEmail = 'pennyworthxai@gmail.com';
+        // Open webmail compose page in a new window/tab
+        window.open(`https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(targetEmail)}`, '_blank', 'noopener,noreferrer');
+        // Trigger default OS mail client
+        setTimeout(() => {
+          window.location.href = `mailto:${targetEmail}`;
+        }, 150);
+      });
+    }
 
   </script>
 </body>
