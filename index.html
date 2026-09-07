@@ -54,6 +54,7 @@
       user-select: none;
       -webkit-user-select: none;
       -webkit-touch-callout: none;
+      pointer-events: none;
     }
 
     html, body {
@@ -371,6 +372,261 @@
       box-shadow: 0 0 16px rgba(239, 68, 68, 0.7);
     }
 
+    /* ## 3-LINES HAMBURGER MENU BUTTON FOR MOBILE */
+    .glass-nav-hamburger {
+      display: none;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 5px;
+      width: 42px;
+      height: 42px;
+      padding: 0;
+      background: rgba(239, 68, 68, 0.12);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1.5px solid rgba(239, 68, 68, 0.5);
+      border-radius: 9999px;
+      cursor: pointer;
+      box-shadow: 0 0 16px rgba(239, 68, 68, 0.25);
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+      z-index: 10001;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    .glass-nav-hamburger:hover,
+    .glass-nav-hamburger:active {
+      background: rgba(239, 68, 68, 0.25);
+      border-color: rgba(239, 68, 68, 0.9);
+      box-shadow: 0 0 24px rgba(239, 68, 68, 0.6);
+      transform: scale(1.05);
+    }
+
+    .hamburger-line {
+      display: block;
+      width: 20px;
+      height: 2px;
+      background: #ffffff;
+      border-radius: 2px;
+      box-shadow: 0 0 6px rgba(255, 255, 255, 0.6);
+      transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.25s ease, background-color 0.3s ease;
+      transform-origin: center;
+    }
+
+    /* Morphing 3 lines into glowing red X when active */
+    .glass-nav-hamburger.is-active .line-1 {
+      transform: translateY(7px) rotate(45deg);
+      background: #ef4444;
+      box-shadow: 0 0 8px #ef4444;
+    }
+    .glass-nav-hamburger.is-active .line-2 {
+      opacity: 0;
+      transform: scaleX(0);
+    }
+    .glass-nav-hamburger.is-active .line-3 {
+      transform: translateY(-7px) rotate(-45deg);
+      background: #ef4444;
+      box-shadow: 0 0 8px #ef4444;
+    }
+
+    /* ## MOBILE GLASS-MORPHIC NAVIGATION DRAWER */
+    .mobile-glass-drawer {
+      display: none;
+      position: fixed;
+      inset: 0;
+      width: 100vw;
+      height: 100vh;
+      height: 100dvh;
+      z-index: 9999;
+      flex-direction: column;
+      justify-content: flex-start;
+      background: rgba(6, 2, 4, 0.94);
+      backdrop-filter: blur(32px) saturate(200%);
+      -webkit-backdrop-filter: blur(32px);
+      padding: 5.2rem 1.4rem 2rem;
+      opacity: 0;
+      pointer-events: none;
+      transform: translateY(-12px);
+      transition: opacity 0.35s cubic-bezier(0.16, 1, 0.3, 1), transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+      overflow-y: auto;
+      overscroll-behavior: contain;
+    }
+
+    .mobile-glass-drawer.is-open {
+      opacity: 1;
+      pointer-events: auto;
+      transform: translateY(0);
+    }
+
+    .mobile-drawer-inner {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+      max-width: 440px;
+      margin: 0 auto;
+      width: 100%;
+    }
+
+    .mobile-drawer-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid rgba(239, 68, 68, 0.25);
+      padding-bottom: 0.85rem;
+    }
+
+    .mobile-drawer-tag {
+      font-family: var(--font-mono);
+      font-size: 0.7rem;
+      letter-spacing: 0.18em;
+      color: #94a3b8;
+      text-transform: uppercase;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .mobile-drawer-close {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: rgba(239, 68, 68, 0.12);
+      border: 1px solid rgba(239, 68, 68, 0.4);
+      color: #ffffff;
+      font-size: 1.05rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: all 0.25s ease;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    .mobile-drawer-close:hover,
+    .mobile-drawer-close:active {
+      background: #ef4444;
+      color: #000000;
+      box-shadow: 0 0 16px rgba(239, 68, 68, 0.8);
+    }
+
+    .mobile-drawer-links {
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
+    }
+
+    .mobile-drawer-link {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0.85rem 1.15rem;
+      font-family: var(--font-display);
+      font-size: 1.1rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      color: #ffffff;
+      text-decoration: none;
+      text-transform: uppercase;
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 12px;
+      transition: all 0.25s ease;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    .mobile-drawer-link:hover,
+    .mobile-drawer-link:active,
+    .mobile-drawer-link.active {
+      background: rgba(239, 68, 68, 0.16);
+      border-color: rgba(239, 68, 68, 0.6);
+      color: #ef4444;
+      transform: translateX(4px);
+      box-shadow: 0 4px 20px rgba(239, 68, 68, 0.25);
+    }
+
+    .mobile-link-num {
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      color: #ef4444;
+      font-weight: 400;
+    }
+
+    .mobile-drawer-actions {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+      padding-top: 1rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .mobile-drawer-cta {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      padding: 0.85rem 1.25rem;
+      background: linear-gradient(135deg, #ef4444, #dc2626);
+      color: #ffffff;
+      font-family: var(--font-mono);
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      text-decoration: none;
+      border-radius: 9999px;
+      box-shadow: 0 0 24px rgba(239, 68, 68, 0.6);
+      transition: transform 0.2s ease;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    .mobile-drawer-cta:active {
+      transform: scale(0.98);
+    }
+
+    .mobile-drawer-email {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.45rem;
+      padding: 0.7rem 1rem;
+      background: rgba(239, 68, 68, 0.08);
+      border: 1px solid rgba(239, 68, 68, 0.35);
+      border-radius: 9999px;
+      color: #e2e8f0;
+      font-family: var(--font-mono);
+      font-size: 0.7rem;
+      letter-spacing: 0.08em;
+      text-decoration: none;
+      transition: border-color 0.2s ease;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    .mobile-drawer-intro-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.4rem;
+      padding: 0.65rem 1rem;
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      border-radius: 9999px;
+      color: #cbd5e1;
+      font-family: var(--font-mono);
+      font-size: 0.68rem;
+      letter-spacing: 0.1em;
+      cursor: pointer;
+      text-transform: uppercase;
+      transition: all 0.2s ease;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    .mobile-drawer-intro-btn:hover,
+    .mobile-drawer-intro-btn:active {
+      background: rgba(239, 68, 68, 0.18);
+      border-color: rgba(239, 68, 68, 0.5);
+      color: #ef4444;
+    }
+
     /* ## RESPONSIVE PERFORMANCE & ADAPTABILITY ACROSS ALL DEVICES */
     .red-glass-navbar {
       will-change: transform;
@@ -415,33 +671,27 @@
     /* Mobile phone adjustments (< 768px) */
     @media (max-width: 767px) {
       .red-glass-navbar {
-        top: 0.85rem;
-        padding: 0.45rem 0.9rem;
-        width: 94%;
-        max-width: 480px;
+        top: 0.75rem;
+        padding: 0.45rem 1rem;
+        width: 92%;
+        max-width: 440px;
         justify-content: space-between;
       }
       .glass-nav-menu {
-        display: none;
+        display: none !important;
+      }
+      .glass-nav-actions {
+        display: none !important;
+      }
+      .glass-nav-hamburger {
+        display: flex !important;
+      }
+      .mobile-glass-drawer {
+        display: flex !important;
       }
       .glass-nav-brand {
-        font-size: 1rem;
-        gap: 0.45rem;
-      }
-      .glass-nav-cta {
-        font-size: 0.65rem;
-        padding: 0.35rem 0.85rem;
-      }
-      .glass-nav-email-pill .nav-email-badge {
-        display: none;
-      }
-      .glass-nav-email-pill {
-        font-size: 0.6rem;
-        padding: 0.3rem 0.55rem;
-      }
-      .glass-nav-intro-btn {
-        font-size: 0.62rem;
-        padding: 0.3rem 0.55rem;
+        font-size: 1.05rem;
+        gap: 0.5rem;
       }
       .hero-title {
         font-size: clamp(3.2rem, 15vw, 5.5rem);
@@ -719,6 +969,11 @@
       transform: scale(1.02);
       animation: cameraPushIn 4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
       transition: filter 0.5s ease;
+      pointer-events: none;
+      user-select: none;
+      -webkit-user-select: none;
+      -webkit-user-drag: none;
+      -webkit-touch-callout: none;
     }
 
     @keyframes cameraPushIn {
@@ -1593,6 +1848,11 @@
       object-fit: cover;
       opacity: 0.88;
       transition: transform 0.8s ease, opacity 0.8s ease;
+      pointer-events: none;
+      user-select: none;
+      -webkit-user-select: none;
+      -webkit-user-drag: none;
+      -webkit-touch-callout: none;
     }
 
     .architect-card-3d:hover .instrument-img {
@@ -2455,9 +2715,10 @@
         <div class="fc-sprockets fc-sprockets-right"></div>
 
         <!-- The Photo -->
-        <div class="fc-photo-wrap">
-          <img src="/tyler_durden_hari.jpg" alt="Hari — Brad Pitt Fight Club Tyler Durden Style" class="fc-photo" id="fc-photo" />
+        <div class="fc-photo-wrap" oncontextmenu="return false;">
+          <img src="/tyler_durden_hari.jpg" alt="Hari — Brad Pitt Fight Club Tyler Durden Style" class="fc-photo" id="fc-photo" draggable="false" oncontextmenu="return false;" />
           <div class="fc-photo-vignette"></div>
+          <div class="image-protection-shield" oncontextmenu="return false;"></div>
           
           <!-- Subliminal Stamp -->
           <div class="fc-stamp">ALTER EGO // ACTIVATED</div>
@@ -2528,7 +2789,59 @@
       <a href="mailto:pennyworthxai@gmail.com" class="glass-nav-cta">INITIATE ↗</a>
       <button class="glass-nav-intro-btn" id="btn-replay-intro" title="Replay 35mm Fight Club Intro">35MM ✦</button>
     </div>
+
+    <!-- Mobile Hamburger Toggle (3 Lines) -->
+    <button class="glass-nav-hamburger" id="nav-hamburger" aria-label="Toggle Navigation Menu" aria-expanded="false">
+      <span class="hamburger-line line-1"></span>
+      <span class="hamburger-line line-2"></span>
+      <span class="hamburger-line line-3"></span>
+    </button>
   </header>
+
+  <!-- ## SECTION: MOBILE_GLASS_DRAWER -->
+  <div class="mobile-glass-drawer" id="mobile-glass-drawer" aria-hidden="true">
+    <div class="mobile-drawer-inner">
+      <div class="mobile-drawer-header">
+        <div class="mobile-drawer-tag">
+          <span class="glass-nav-red-dot"></span> DIRECTORY // NAVIGATION
+        </div>
+        <button class="mobile-drawer-close" id="mobile-drawer-close" aria-label="Close navigation menu">✕</button>
+      </div>
+      <nav class="mobile-drawer-links">
+        <a href="#transmission" class="mobile-drawer-link">
+          <span class="mobile-link-text">TRANSMISSION</span>
+          <span class="mobile-link-num">01</span>
+        </a>
+        <a href="#numbers" class="mobile-drawer-link">
+          <span class="mobile-link-text">TELEMETRY</span>
+          <span class="mobile-link-num">02</span>
+        </a>
+        <a href="#instrument" class="mobile-drawer-link">
+          <span class="mobile-link-text">ARCHITECT</span>
+          <span class="mobile-link-num">03</span>
+        </a>
+        <a href="#catalogue-section" class="mobile-drawer-link">
+          <span class="mobile-link-text">PROJECTS</span>
+          <span class="mobile-link-num">04</span>
+        </a>
+        <a href="#faqs" class="mobile-drawer-link">
+          <span class="mobile-link-text">PROTOCOLS</span>
+          <span class="mobile-link-num">05</span>
+        </a>
+      </nav>
+      <div class="mobile-drawer-actions">
+        <a href="mailto:pennyworthxai@gmail.com" class="mobile-drawer-cta">
+          INITIATE TRANSMISSION ↗
+        </a>
+        <a href="mailto:pennyworthxai@gmail.com" class="mobile-drawer-email">
+          <span style="color:#ef4444;">✉</span> pennyworthxai@gmail.com
+        </a>
+        <button class="mobile-drawer-intro-btn" id="btn-replay-intro-mobile">
+          35MM FIGHT CLUB INTRO ✦
+        </button>
+      </div>
+    </div>
+  </div>
 
   <footer class="hud-footer">
     <div class="hud-crossing">
@@ -2683,7 +2996,8 @@
 
               <!-- View 2: AIOS Core Engine Architecture -->
               <div class="architect-view" id="view-engine">
-                <img src="/ai_core_glow.png" onerror="this.src='/futuristic_server.png'" alt="AIOS Core Engine Architecture" class="instrument-img" />
+                <img src="/ai_core_glow.png" onerror="this.src='/futuristic_server.png'" alt="AIOS Core Engine Architecture" class="instrument-img" draggable="false" oncontextmenu="return false;" />
+                <div class="image-protection-shield" oncontextmenu="return false;"></div>
                 <div class="architect-hud-content">
                   <div class="architect-hud-top">
                     <span class="architect-badge">
@@ -4080,12 +4394,12 @@
           for (let i = 0; i < sectionCache.length; i++) {
             const sec = sectionCache[i];
             if (scrollPos >= sec.top && scrollPos < sec.top + sec.height) {
+              const activeHref = `#${sec.id}`;
               navLinks.forEach(link => {
-                if (link.getAttribute('href') === `#${sec.id}`) {
-                  link.classList.add('active');
-                } else {
-                  link.classList.remove('active');
-                }
+                link.classList.toggle('active', link.getAttribute('href') === activeHref);
+              });
+              document.querySelectorAll('.mobile-drawer-link').forEach(link => {
+                link.classList.toggle('active', link.getAttribute('href') === activeHref);
               });
               break;
             }
@@ -4108,6 +4422,64 @@
         setTimeout(() => {
           window.location.href = `mailto:${targetEmail}`;
         }, 150);
+      });
+    }
+
+    // Mobile Hamburger Navigation Menu Controller
+    const navHamburger = document.getElementById('nav-hamburger');
+    const mobileDrawer = document.getElementById('mobile-glass-drawer');
+    const mobileDrawerClose = document.getElementById('mobile-drawer-close');
+    const mobileDrawerLinks = document.querySelectorAll('.mobile-drawer-link');
+    const btnReplayIntroMobile = document.getElementById('btn-replay-intro-mobile');
+
+    function toggleMobileMenu(forceClose = false) {
+      if (!navHamburger || !mobileDrawer) return;
+      const isOpen = forceClose ? false : !mobileDrawer.classList.contains('is-open');
+      if (isOpen) {
+        mobileDrawer.classList.add('is-open');
+        navHamburger.classList.add('is-active');
+        navHamburger.setAttribute('aria-expanded', 'true');
+        mobileDrawer.setAttribute('aria-hidden', 'false');
+        document.body.style.overflow = 'hidden';
+      } else {
+        mobileDrawer.classList.remove('is-open');
+        navHamburger.classList.remove('is-active');
+        navHamburger.setAttribute('aria-expanded', 'false');
+        mobileDrawer.setAttribute('aria-hidden', 'true');
+        document.body.style.overflow = '';
+      }
+    }
+
+    if (navHamburger) {
+      navHamburger.addEventListener('click', (e) => {
+        e.stopPropagation();
+        toggleMobileMenu();
+      });
+    }
+
+    if (mobileDrawerClose) {
+      mobileDrawerClose.addEventListener('click', () => toggleMobileMenu(true));
+    }
+
+    mobileDrawerLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        toggleMobileMenu(true);
+      });
+    });
+
+    window.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && mobileDrawer && mobileDrawer.classList.contains('is-open')) {
+        toggleMobileMenu(true);
+      }
+    });
+
+    if (btnReplayIntroMobile) {
+      btnReplayIntroMobile.addEventListener('click', () => {
+        toggleMobileMenu(true);
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+        if (typeof runFightClubIntro === 'function') {
+          runFightClubIntro();
+        }
       });
     }
 
