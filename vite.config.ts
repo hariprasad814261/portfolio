@@ -10,4 +10,9 @@ export default defineConfig({
       "@": path.resolve(__dirname, "./src"),
     },
   },
+  server: {
+    watch: {
+      ignored: ['**/assests and videos for clone portfolio/**', '**/*.mp4', '**/*.mkv'],
+    },
+  },
 })

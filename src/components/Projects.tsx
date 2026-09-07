@@ -55,6 +55,15 @@ const projects: Project[] = [
     imageUrl: '/projects/ample.ai.png',
     liveLink: 'https://merry-blancmange-dbfa0d.netlify.app/',
   },
+  {
+    id: '06',
+    title: 'Dental Clinic Care',
+    client: 'Healthcare & Medical',
+    description:
+      'A clean, modern healthcare portal and dental clinic web platform featuring streamlined patient booking, transparent pricing, and interactive service overviews.',
+    imageUrl: '/projects/dentalclinic.png',
+    liveLink: 'https://dental-clinic-b3l5ot5am-hariprasad814261-5030s-projects.vercel.app/',
+  },
 ];
 
 export function Projects() {
@@ -89,12 +98,11 @@ export function Projects() {
               href={project.liveLink}
               target="_blank"
               rel="noopener noreferrer"
-              className={`group relative glass-card glass-highlight rounded-3xl overflow-hidden
+              className="group relative glass-card glass-highlight rounded-3xl overflow-hidden
                 transition-all duration-700 ease-[cubic-bezier(0.15,0.83,0.66,1)]
                 hover:scale-[1.02] hover:z-[100] hover:shadow-2xl hover:shadow-[#6F7FB7]/5
                 cursor-pointer block h-[400px] sm:h-[500px] md:h-[550px]
-                animate-on-scroll
-                ${project.id === '05' ? 'md:col-span-2 md:justify-self-center md:w-[calc(50%-1rem)]' : ''}`}
+                animate-on-scroll"
               data-delay={`${(i % 2) * 100}`}
             >
               {/* Project Image */}

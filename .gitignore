@@ -22,3 +22,6 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Local reference videos and screen recordings
+assests and videos for clone portfolio/
