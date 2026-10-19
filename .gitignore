@@ -23,5 +23,8 @@ dist-ssr
 *.sln
 *.sw?
 
-# Local reference videos and screen recordings
-assests and videos for clone portfolio/
+# Video and media recordings
+*.mp4
+*.mkv
+*.mov
+*.webm

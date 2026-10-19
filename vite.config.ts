@@ -12,7 +12,7 @@ export default defineConfig({
   },
   server: {
     watch: {
-      ignored: ['**/assests and videos for clone portfolio/**', '**/*.mp4', '**/*.mkv'],
+      ignored: ['**/*.mp4', '**/*.mkv'],
     },
   },
 })
