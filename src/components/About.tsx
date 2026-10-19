@@ -5,7 +5,7 @@ export function About() {
 
   return (
     <section id="story" className="relative py-24 md:py-32">
-      <main className="max-w-7xl mx-auto px-5 sm:px-8 md:px-12 grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+      <div className="max-w-7xl mx-auto px-5 sm:px-8 md:px-12 grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
         {/* ── Text Content ──────────────────────── */}
         <div className="lg:col-span-7 space-y-8 animate-on-scroll">
           {/* Section label */}
@@ -108,7 +108,7 @@ export function About() {
             />
           </div>
         </div>
-      </main>
+      </div>
     </section>
   );
 }

@@ -2975,9 +2975,13 @@
           <span class="mobile-link-text">PROJECTS</span>
           <span class="mobile-link-num">04</span>
         </a>
+        <a href="#deep-impact" class="mobile-drawer-link">
+          <span class="mobile-link-text">IMPACT</span>
+          <span class="mobile-link-num">05</span>
+        </a>
         <a href="#faqs" class="mobile-drawer-link">
           <span class="mobile-link-text">PROTOCOLS</span>
-          <span class="mobile-link-num">05</span>
+          <span class="mobile-link-num">06</span>
         </a>
       </nav>
       <div class="mobile-drawer-actions">
@@ -3243,7 +3247,7 @@
 
           <!-- Card 3: Dental Clinic Care -->
           <a href="https://dental-clinic-ivory-gamma.vercel.app/" target="_blank" rel="noopener noreferrer" class="catalogue-card">
-            <img src="/projects/dental%20website.png" onerror="this.src='/projects/dentalclinic.png'" alt="Dental Clinic Care Portal" class="catalogue-card-img" width="600" height="375" draggable="false" oncontextmenu="return false;" />
+            <img src="/projects/dental-website.png" onerror="this.src='/projects/dentalclinic.png'" alt="Dental Clinic Care Portal" class="catalogue-card-img" width="600" height="375" draggable="false" oncontextmenu="return false;" />
             <div class="catalogue-card-overlay"></div>
             <div class="catalogue-card-content">
               <div class="catalogue-card-telemetry">
@@ -4019,7 +4023,18 @@
     let fcProgress = 0;
     let fcTimer = null;
     let quoteInterval = null;
+    let quoteTimeout = null;
+    let progressTimeout = null;
+    let explodingTimeout = null;
     let isIntroFinished = false;
+
+    function clearIntroTimers() {
+      if (fcTimer) { clearInterval(fcTimer); fcTimer = null; }
+      if (quoteInterval) { clearInterval(quoteInterval); quoteInterval = null; }
+      if (quoteTimeout) { clearTimeout(quoteTimeout); quoteTimeout = null; }
+      if (progressTimeout) { clearTimeout(progressTimeout); progressTimeout = null; }
+      if (explodingTimeout) { clearTimeout(explodingTimeout); explodingTimeout = null; }
+    }
 
     // 3D Parallax tilt on Fight Club card
     if (fcCardFrame) {
@@ -4038,8 +4053,7 @@
       if (isIntroFinished) return;
       isIntroFinished = true;
 
-      clearInterval(fcTimer);
-      clearInterval(quoteInterval);
+      clearIntroTimers();
 
       sessionStorage.setItem('fc_intro_played', 'true');
 
@@ -4050,7 +4064,7 @@
       // Explosive 35mm film burn flash
       fcIntro.classList.add('exploding');
 
-      setTimeout(() => {
+      explodingTimeout = setTimeout(() => {
         fcIntro.classList.add('loaded');
         fcIntro.classList.remove('exploding');
 
@@ -4063,8 +4077,7 @@
     }
 
     function runFightClubIntro() {
-      if (fcTimer) clearInterval(fcTimer);
-      if (quoteInterval) clearInterval(quoteInterval);
+      clearIntroTimers();
       isIntroFinished = false;
       fcProgress = 0;
       fcIntro.classList.remove('loaded', 'exploding');
@@ -4077,7 +4090,7 @@
         quoteIndex = (quoteIndex + 1) % fcQuotes.length;
         fcQuoteText.style.opacity = '0';
         fcQuoteText.style.transform = 'translateY(6px)';
-        setTimeout(() => {
+        quoteTimeout = setTimeout(() => {
           fcQuoteText.textContent = fcQuotes[quoteIndex];
           fcQuoteText.style.opacity = '1';
           fcQuoteText.style.transform = 'translateY(0)';
@@ -4089,10 +4102,10 @@
         fcProgress += 1.6;
         if (fcProgress >= 100) {
           fcProgress = 100;
-          clearInterval(fcTimer);
+          if (fcTimer) { clearInterval(fcTimer); fcTimer = null; }
           fcProgressFill.style.width = '100%';
           fcProgressVal.textContent = 'UNRESTRICTED: 100%';
-          setTimeout(triggerEnterSite, 350);
+          progressTimeout = setTimeout(triggerEnterSite, 350);
         } else {
           fcProgressFill.style.width = fcProgress + '%';
           const stage = fcProgress < 35 ? '35MM CALIBRATION' : (fcProgress < 75 ? 'SUBLIMINAL SYNC' : 'NEURAL UNLOCK');
@@ -4329,6 +4342,23 @@
 
     // --- FAQ Accordion Interactive Logic ---
     const faqItems = document.querySelectorAll('.faq-item');
+
+    function updateFaqTabOrder() {
+      faqItems.forEach(item => {
+        const panel = item.querySelector('.faq-answer-panel');
+        const isActive = item.classList.contains('active');
+        if (panel) {
+          if (isActive) {
+            panel.removeAttribute('inert');
+            panel.querySelectorAll('a, button').forEach(el => el.removeAttribute('tabindex'));
+          } else {
+            panel.setAttribute('inert', '');
+            panel.querySelectorAll('a, button').forEach(el => el.setAttribute('tabindex', '-1'));
+          }
+        }
+      });
+    }
+
     faqItems.forEach(item => {
       const trigger = item.querySelector('.faq-trigger');
       const panel = item.querySelector('.faq-answer-panel');
@@ -4359,12 +4389,17 @@
           if (panel) panel.setAttribute('aria-hidden', 'false');
         }
 
+        updateFaqTabOrder();
+
         // Smoothly refresh ScrollTrigger after height transition
         setTimeout(() => {
           ScrollTrigger.refresh();
         }, 420);
       });
     });
+
+    // Run on initial load to remove collapsed items from tab order
+    updateFaqTabOrder();
 
     // --- 3D Holographic Architect Card Parallax & Glare Physics ---
     const architectContainer = document.getElementById('architect-card-container');

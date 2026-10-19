@@ -61,7 +61,7 @@ const projects: Project[] = [
     client: 'Healthcare & Medical',
     description:
       'A clean, modern healthcare portal and dental clinic web platform featuring streamlined patient booking, transparent pricing, and interactive service overviews.',
-    imageUrl: '/projects/dental%20website.png',
+    imageUrl: '/projects/dental-website.png',
     liveLink: 'https://dental-clinic-ivory-gamma.vercel.app/',
   },
 ];
@@ -69,7 +69,7 @@ const projects: Project[] = [
 export function Projects() {
   return (
     <section id="projects" className="relative py-24 md:py-32">
-      <main className="max-w-7xl mx-auto px-5 sm:px-8 md:px-12">
+      <div className="max-w-7xl mx-auto px-5 sm:px-8 md:px-12">
         {/* ── Section Header ───────────────────── */}
         <div className="max-w-3xl mb-16 md:mb-20 animate-on-scroll">
           <div className="flex items-center gap-3 mb-6">
@@ -152,7 +152,7 @@ export function Projects() {
             </a>
           ))}
         </div>
-      </main>
+      </div>
     </section>
   );
 }
