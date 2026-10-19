@@ -1,0 +1,27 @@
+# pennyworth.ai — Autonomous AI & Web Systems
+> AI Automation Expert & Engineering Studio
+
+## Founder & Lead Architect
+- **Name**: Hari
+- **Title**: AI Automation Expert & Founder of pennyworth.ai
+- **Location**: Global / Remote
+- **Contact**: pennyworthxai@gmail.com
+- **Website**: https://pennyworth.ai
+
+## Core Specializations & Services
+1. **Enterprise AI Automation Systems**: Architecting end-to-end autonomous operational pipelines that eliminate repetitive friction and manual bottlenecks.
+2. **Sub-180ms Voice Agents**: Real-time conversational AI voice agents for inbound support triage, dynamic scheduling, instant CRM updates, and client qualification.
+3. **High-Performance Web Platforms**: Cinematic 60fps WebGL, 3D interactive experiences, and responsive digital storefronts tailored for conversion.
+
+## Flagship Systems & Portfolio
+- **Ample.ai Voice Automation**: Sub-second real-time conversational voice agent replacing high-cost receptionists with 72% operational savings (Live: https://merry-blancmange-dbfa0d.netlify.app/).
+- **Mr. Moglee's Restaurant**: High-aesthetic hospitality web platform with smooth animations (Live: https://mrmogglee.netlify.app/).
+- **Matcha Tea**: Serene organic e-commerce experience designed for wellness lifestyle brands (Live: https://matchatea1.netlify.app/).
+- **Porsche Showcase**: High-performance landing experience reflecting precision automotive engineering (Live: https://porschewebsite1.netlify.app/).
+- **Keyboard Animation 3D**: Interactive WebGL showcase featuring spatial micro-interactions (Live: https://keyboardanimation1.netlify.app/).
+- **Dental Clinic Care**: Streamlined healthcare patient booking platform.
+
+## Operational Standards
+- Strict client roster limit: 2 to 3 partners at a time to ensure relentless execution and compounding business value.
+- Target latency: Sub-180ms for conversational voice infrastructure.
+- Direct Dispatch: pennyworthxai@gmail.com

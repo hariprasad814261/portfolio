@@ -4,8 +4,113 @@
   <!-- ## SECTION: METADATA_AND_FONTS -->
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>HARI // Founder of pennyworth.ai — Autonomous AI & Web Systems</title>
-  <meta name="description" content="Cinematic WebGL portfolio of Hari, Founder of pennyworth.ai. Engineering autonomous AI Operating Systems (AIOS) and high-end interactive digital experiences." />
+  <title>HARI // AI Automation Expert & Founder of pennyworth.ai</title>
+  <meta name="description" content="Cinematic WebGL portfolio of Hari, AI Automation Expert & Founder of pennyworth.ai. Engineering autonomous AI automation systems and high-end interactive digital experiences." />
+  <link rel="canonical" href="https://pennyworth.ai/" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+  <!-- Preload Critical Above-The-Fold LCP Image -->
+  <link rel="preload" as="image" href="/tyler_durden_hari.jpg" fetchpriority="high" />
+
+  <!-- Open Graph / Facebook / LinkedIn / WhatsApp -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://pennyworth.ai/" />
+  <meta property="og:title" content="HARI // AI Automation Expert & Founder of pennyworth.ai" />
+  <meta property="og:description" content="Cinematic WebGL portfolio of Hari, AI Automation Expert & Founder of pennyworth.ai. Engineering autonomous AI automation systems and high-end interactive digital experiences." />
+  <meta property="og:image" content="https://pennyworth.ai/my_professional_photo.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+
+  <!-- Twitter / X Cards -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:url" content="https://pennyworth.ai/" />
+  <meta name="twitter:title" content="HARI // AI Automation Expert & Founder of pennyworth.ai" />
+  <meta name="twitter:description" content="Cinematic WebGL portfolio of Hari, AI Automation Expert & Founder of pennyworth.ai. Engineering autonomous AI automation systems and high-end interactive digital experiences." />
+  <meta name="twitter:image" content="https://pennyworth.ai/my_professional_photo.jpg" />
+
+  <!-- Schema.org JSON-LD (GEO & Rich Results) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Person",
+        "@id": "https://pennyworth.ai/#person",
+        "name": "Hari",
+        "jobTitle": "AI Automation Expert & Founder",
+        "worksFor": {
+          "@id": "https://pennyworth.ai/#organization"
+        },
+        "url": "https://pennyworth.ai",
+        "image": "https://pennyworth.ai/my_professional_photo.jpg",
+        "email": "pennyworthxai@gmail.com",
+        "description": "Founder of pennyworth.ai. Engineering enterprise AI automation systems, sub-180ms voice agents, and high-performance interactive web platforms."
+      },
+      {
+        "@type": "Organization",
+        "@id": "https://pennyworth.ai/#organization",
+        "name": "pennyworth.ai",
+        "url": "https://pennyworth.ai",
+        "logo": "https://pennyworth.ai/favicon.svg",
+        "founder": {
+          "@id": "https://pennyworth.ai/#person"
+        },
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "email": "pennyworthxai@gmail.com",
+          "contactType": "customer service"
+        }
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://pennyworth.ai/#website",
+        "url": "https://pennyworth.ai",
+        "name": "Hari // pennyworth.ai",
+        "publisher": {
+          "@id": "https://pennyworth.ai/#organization"
+        }
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://pennyworth.ai/#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What does an AI Automation Expert engineer for modern businesses?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "As an AI Automation Expert, I build integrated networks of autonomous intelligence layers, sub-180ms real-time voice agents, and background automation workflows engineered to replace manual operational bottlenecks. Rather than fragmented chatbots or brittle Zapier rules, my bespoke AI automation systems manage inbound customer triage, dynamic scheduling, instant CRM updates, and multi-tier business workflows with human-grade reasoning and zero latency fatigue."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Why is the client roster strictly capped at 2 to 3 partners?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Quality of execution compounds when attention is not diluted. By keeping a strict maximum of 2 to 3 clients simultaneously, every project receives obsessive focus, personalized AI architecture, and immediate engineering turnaround."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How fast are the conversational voice agents deployed?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Voice agents operate with sub-180ms latency response times, matching natural human conversational pauses. They seamlessly triage callers, verify records, and book appointments 24/7."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How do we initiate a collaboration and verify current availability?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Transmission can be initiated directly via email at pennyworthxai@gmail.com with a brief description of your operational goals or technical roadmap. All inbound inquiries receive an engineering assessment and capacity determination within 24 hours."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
 
   <!-- Google Fonts: Syne, Space Grotesk, Space Mono, Inter -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -55,6 +160,52 @@
       -webkit-user-select: none;
       -webkit-touch-callout: none;
       pointer-events: none;
+    }
+
+    /* ## ACCESSIBILITY & FOCUS VISIBLE (WCAG 2.2 AA) */
+    :focus-visible {
+      outline: 2px solid var(--accent-red);
+      outline-offset: 3px;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+      }
+      .laser-scanner-beam,
+      .hologram-glare,
+      .fc-cigarette-burn,
+      .fc-film-grain {
+        display: none !important;
+      }
+    }
+
+    /* Footer Legal Links Styling */
+    .footer-legal-links {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.75rem;
+      margin-top: 1rem;
+      font-family: var(--font-mono);
+      font-size: 0.65rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+    .footer-legal-links .legal-link {
+      color: var(--text-sub);
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+    .footer-legal-links .legal-link:hover {
+      color: var(--accent-red);
+    }
+    .footer-legal-links .legal-dot {
+      color: var(--text-sub);
+      opacity: 0.5;
     }
 
     html, body {
@@ -1795,7 +1946,7 @@
       box-shadow: 0 40px 100px rgba(0, 0, 0, 0.9), 0 0 60px rgba(225, 29, 72, 0.4);
     }
 
-    /* Views (Architect Photo vs AIOS Engine) */
+    /* Views (Architect Photo vs AI Automation Engine) */
     .architect-view {
       position: absolute;
       inset: 0;
@@ -2716,7 +2867,7 @@
 
         <!-- The Photo -->
         <div class="fc-photo-wrap" oncontextmenu="return false;">
-          <img src="/tyler_durden_hari.jpg" alt="Hari — Brad Pitt Fight Club Tyler Durden Style" class="fc-photo" id="fc-photo" draggable="false" oncontextmenu="return false;" />
+          <img src="/tyler_durden_hari.jpg" alt="Hari — Brad Pitt Fight Club Tyler Durden Style" class="fc-photo" id="fc-photo" width="600" height="800" draggable="false" oncontextmenu="return false;" />
           <div class="fc-photo-vignette"></div>
           <div class="image-protection-shield" oncontextmenu="return false;"></div>
           
@@ -2873,7 +3024,7 @@
           <span class="txt-white">HA</span><span class="txt-red">RI</span>
         </h1>
         <p class="hero-subtitle hover-shader-target">
-          <span class="txt-red">FOUNDER OF PENNYWORTH.AI</span> // <span class="txt-white">ARCHITECTING AUTONOMOUS AI</span> & <span class="txt-black">NEXT-GEN WEB PLATFORMS</span>
+          <span class="txt-red">AI AUTOMATION EXPERT & FOUNDER OF PENNYWORTH.AI</span> // <span class="txt-white">AUTONOMOUS AI SYSTEMS</span> & <span class="txt-black">NEXT-GEN WEB PLATFORMS</span>
         </p>
       </div>
 
@@ -2881,10 +3032,10 @@
       <div class="hero-ticker">
         <div class="ticker-track">
           <div class="ticker-item hover-shader-target">
-            <span class="txt-white">FOUNDER & AI ARCHITECT</span> <span class="ticker-sparkle">✦</span> <span class="txt-red">24/7 AUTONOMOUS SYSTEMS</span> <span class="ticker-sparkle">✦</span> <a href="mailto:pennyworthxai@gmail.com" style="color:inherit;text-decoration:none;"><span class="txt-white">COMPANY EMAIL:</span> <span class="txt-red">PENNYWORTHXAI@GMAIL.COM</span></a> <span class="ticker-sparkle">✦</span> <span class="txt-black">BESPOKE WEB EXPERIENCES</span> <span class="ticker-sparkle">✦</span> <span class="txt-white">PENNYWORTH.AI</span> <span class="ticker-sparkle">✦</span>
+            <span class="txt-white">AI AUTOMATION EXPERT</span> <span class="ticker-sparkle">✦</span> <span class="txt-red">24/7 AUTONOMOUS SYSTEMS</span> <span class="ticker-sparkle">✦</span> <a href="mailto:pennyworthxai@gmail.com" style="color:inherit;text-decoration:none;"><span class="txt-white">COMPANY EMAIL:</span> <span class="txt-red">PENNYWORTHXAI@GMAIL.COM</span></a> <span class="ticker-sparkle">✦</span> <span class="txt-black">BESPOKE WEB EXPERIENCES</span> <span class="ticker-sparkle">✦</span> <span class="txt-white">PENNYWORTH.AI</span> <span class="ticker-sparkle">✦</span>
           </div>
           <div class="ticker-item hover-shader-target">
-            <span class="txt-white">FOUNDER & AI ARCHITECT</span> <span class="ticker-sparkle">✦</span> <span class="txt-red">24/7 AUTONOMOUS SYSTEMS</span> <span class="ticker-sparkle">✦</span> <a href="mailto:pennyworthxai@gmail.com" style="color:inherit;text-decoration:none;"><span class="txt-white">COMPANY EMAIL:</span> <span class="txt-red">PENNYWORTHXAI@GMAIL.COM</span></a> <span class="ticker-sparkle">✦</span> <span class="txt-black">BESPOKE WEB EXPERIENCES</span> <span class="ticker-sparkle">✦</span> <span class="txt-white">PENNYWORTH.AI</span> <span class="ticker-sparkle">✦</span>
+            <span class="txt-white">AI AUTOMATION EXPERT</span> <span class="ticker-sparkle">✦</span> <span class="txt-red">24/7 AUTONOMOUS SYSTEMS</span> <span class="ticker-sparkle">✦</span> <a href="mailto:pennyworthxai@gmail.com" style="color:inherit;text-decoration:none;"><span class="txt-white">COMPANY EMAIL:</span> <span class="txt-red">PENNYWORTHXAI@GMAIL.COM</span></a> <span class="ticker-sparkle">✦</span> <span class="txt-black">BESPOKE WEB EXPERIENCES</span> <span class="ticker-sparkle">✦</span> <span class="txt-white">PENNYWORTH.AI</span> <span class="ticker-sparkle">✦</span>
           </div>
         </div>
       </div>
@@ -2919,7 +3070,7 @@
         <span class="txt-white">BUILD</span> <span class="txt-black">THE FUTURE.</span>
       </blockquote>
       <p class="transmission-sub hover-shader-target">
-        <span class="txt-white">I engineer high-performance</span> <span class="txt-red">Artificial Intelligence Operating Systems (AIOS)</span>, <span class="txt-white">conversational voice infrastructure, and bespoke web platforms</span> <span class="txt-black">designed to eliminate operational friction.</span>
+        <span class="txt-white">As an</span> <span class="txt-red">AI Automation Expert</span>, <span class="txt-white">I engineer high-performance autonomous AI automation systems, conversational voice infrastructure, and bespoke web platforms</span> <span class="txt-black">designed to eliminate operational friction.</span>
       </p>
     </section>
 
@@ -2953,7 +3104,7 @@
         <div>
           <div class="view-switcher-bar">
             <button class="view-switch-btn active" id="btn-view-architect">01 // THE ARCHITECT</button>
-            <button class="view-switch-btn" id="btn-view-engine">02 // AIOS CORE ENGINE</button>
+            <button class="view-switch-btn" id="btn-view-engine">02 // AI AUTOMATION ENGINE</button>
           </div>
 
           <div class="architect-card-container" id="architect-card-container">
@@ -2972,7 +3123,7 @@
 
               <!-- View 1: The Architect (Hari's Professional Portrait) -->
               <div class="architect-view active" id="view-architect">
-                <img src="/my_professional_photo.jpg" alt="Hari — Founder of pennyworth.ai & Lead AI Architect" class="architect-photo-img" draggable="false" oncontextmenu="return false;" />
+                <img src="/my_professional_photo.jpg" alt="Hari — Founder of pennyworth.ai & Lead AI Architect" class="architect-photo-img" width="600" height="800" draggable="false" oncontextmenu="return false;" />
                 <div class="image-protection-shield" oncontextmenu="return false;"></div>
                 <div class="architect-hud-content">
                   <div class="architect-hud-top">
@@ -2984,30 +3135,30 @@
                   </div>
                   <div class="architect-hud-bottom">
                     <h3 class="architect-hud-name">HARI</h3>
-                    <div class="architect-hud-role">FOUNDER & LEAD AI ARCHITECT // PENNYWORTH.AI</div>
+                    <div class="architect-hud-role">AI AUTOMATION EXPERT & FOUNDER // PENNYWORTH.AI</div>
                     <div class="architect-hud-stats">
                       <span>STATUS: ONLINE</span>
                       <span>SYSTEMS: 6+ DEPLOYED</span>
-                      <span>FOCUS: AIOS</span>
+                      <span>FOCUS: AI AUTOMATION</span>
                     </div>
                   </div>
                 </div>
               </div>
 
-              <!-- View 2: AIOS Core Engine Architecture -->
+              <!-- View 2: AI Automation Engine Architecture -->
               <div class="architect-view" id="view-engine">
-                <img src="/ai_core_glow.png" onerror="this.src='/futuristic_server.png'" alt="AIOS Core Engine Architecture" class="instrument-img" draggable="false" oncontextmenu="return false;" />
+                <img src="/ai_core_glow.png" onerror="this.src='/futuristic_server.png'" alt="AI Automation Engine Architecture" class="instrument-img" width="600" height="600" draggable="false" oncontextmenu="return false;" />
                 <div class="image-protection-shield" oncontextmenu="return false;"></div>
                 <div class="architect-hud-content">
                   <div class="architect-hud-top">
                     <span class="architect-badge">
                       <span class="architect-badge-dot"></span>
-                      AIOS ENGINE ACTIVE
+                      AI AUTOMATION ENGINE ACTIVE
                     </span>
                     <span class="instrument-corner-tag">V.4.2 // NEURAL CORE</span>
                   </div>
                   <div class="architect-hud-bottom">
-                    <h3 class="architect-hud-name">AIOS CORE ENGINE</h3>
+                    <h3 class="architect-hud-name">AI AUTOMATION ENGINE</h3>
                     <div class="architect-hud-role">AUTONOMOUS MULTI-AGENT INGESTION PIPELINE</div>
                     <div class="architect-hud-stats">
                       <span>LATENCY: &lt;180MS</span>
@@ -3026,7 +3177,7 @@
             <span class="txt-black">DUAL ARCHITECTURE:</span> <span class="txt-white">AUTONOMOUS AI +</span> <span class="txt-red">HIGH-END WEB</span>
           </h2>
           <p class="hover-shader-target">
-            At <strong class="txt-red">pennyworth.ai</strong>, I architect sophisticated <strong class="txt-white">Artificial Intelligence Operating Systems (AIOS)</strong> and high-speed voice agent pipelines that execute inbound workflows, support triage, and customer bookings entirely on autopilot.
+            As an <strong class="txt-red">AI Automation Expert</strong> and founder of <strong class="txt-white">pennyworth.ai</strong>, I architect sophisticated <strong class="txt-white">enterprise AI automation systems</strong> and high-speed voice agent pipelines that execute inbound workflows, support triage, and customer bookings entirely on autopilot.
           </p>
           <p class="hover-shader-target">
             Beyond backend AI orchestration, I build <strong class="txt-white">high-end, responsive web platforms</strong> and <strong class="txt-red">3D experiences</strong>. By strictly limiting my client roster to <strong class="txt-black">2 or 3 partners at a time</strong>, every project receives relentless attention and compounding business value.
@@ -3056,16 +3207,16 @@
       <!-- Horizontal scrollable slider track -->
       <div class="catalogue-scroll-wrapper" id="catalogue-scroll-wrapper">
         <div class="catalogue-horizontal-track" id="catalogue-track">
-          <!-- Card 1: Ample.ai Voice OS -->
+          <!-- Card 1: Ample.ai Voice Automation -->
           <a href="https://merry-blancmange-dbfa0d.netlify.app/" target="_blank" rel="noopener noreferrer" class="catalogue-card">
-            <img src="/projects/ample.ai.png" alt="Ample.ai Voice OS" class="catalogue-card-img" draggable="false" oncontextmenu="return false;" />
+            <img src="/projects/ample.ai.png" alt="Ample.ai Voice Automation" class="catalogue-card-img" width="600" height="375" draggable="false" oncontextmenu="return false;" />
             <div class="catalogue-card-overlay"></div>
             <div class="catalogue-card-content">
               <div class="catalogue-card-telemetry">
                 <span>ENTERPRISE AI</span>
-                <span>AIOS-01</span>
+                <span>AUTOMATION-01</span>
               </div>
-              <h3 class="catalogue-card-title">Ample.ai Voice OS</h3>
+              <h3 class="catalogue-card-title">Ample.ai Voice Automation</h3>
               <p class="catalogue-card-desc">
                 Sub-second real-time conversational voice agent handling inbound calls and booking workflows with 72% cost savings.
               </p>
@@ -3075,7 +3226,7 @@
 
           <!-- Card 2: Mr. Moglee's Restaurant -->
           <a href="https://mrmogglee.netlify.app/" target="_blank" rel="noopener noreferrer" class="catalogue-card">
-            <img src="/projects/mrmogleewebsite.png" alt="Mr. Moglee's Restaurant" class="catalogue-card-img" draggable="false" oncontextmenu="return false;" />
+            <img src="/projects/mrmogleewebsite.png" alt="Mr. Moglee's Restaurant" class="catalogue-card-img" width="600" height="375" draggable="false" oncontextmenu="return false;" />
             <div class="catalogue-card-overlay"></div>
             <div class="catalogue-card-content">
               <div class="catalogue-card-telemetry">
@@ -3092,7 +3243,7 @@
 
           <!-- Card 3: Dental Clinic Care -->
           <a href="https://dental-clinic-ivory-gamma.vercel.app/" target="_blank" rel="noopener noreferrer" class="catalogue-card">
-            <img src="/projects/dental%20website.png" onerror="this.src='/projects/dentalclinic.png'" alt="Dental Clinic Care Portal" class="catalogue-card-img" draggable="false" oncontextmenu="return false;" />
+            <img src="/projects/dental%20website.png" onerror="this.src='/projects/dentalclinic.png'" alt="Dental Clinic Care Portal" class="catalogue-card-img" width="600" height="375" draggable="false" oncontextmenu="return false;" />
             <div class="catalogue-card-overlay"></div>
             <div class="catalogue-card-content">
               <div class="catalogue-card-telemetry">
@@ -3109,7 +3260,7 @@
 
           <!-- Card 4: Matcha Tea -->
           <a href="https://matchatea1.netlify.app/" target="_blank" rel="noopener noreferrer" class="catalogue-card">
-            <img src="/projects/matchawebsite.png" alt="Matcha Tea Storefront" class="catalogue-card-img" draggable="false" oncontextmenu="return false;" />
+            <img src="/projects/matchawebsite.png" alt="Matcha Tea Storefront" class="catalogue-card-img" width="600" height="375" draggable="false" oncontextmenu="return false;" />
             <div class="catalogue-card-overlay"></div>
             <div class="catalogue-card-content">
               <div class="catalogue-card-telemetry">
@@ -3126,7 +3277,7 @@
 
           <!-- Card 5: Porsche Showcase -->
           <a href="https://porschewebsite1.netlify.app/" target="_blank" rel="noopener noreferrer" class="catalogue-card">
-            <img src="/projects/porchewebsite.png" alt="Porsche Showcase" class="catalogue-card-img" draggable="false" oncontextmenu="return false;" />
+            <img src="/projects/porchewebsite.png" alt="Porsche Showcase" class="catalogue-card-img" width="600" height="375" draggable="false" oncontextmenu="return false;" />
             <div class="catalogue-card-overlay"></div>
             <div class="catalogue-card-content">
               <div class="catalogue-card-telemetry">
@@ -3143,7 +3294,7 @@
 
           <!-- Card 6: Keyboard Animation -->
           <a href="https://keyboardanimation1.netlify.app/" target="_blank" rel="noopener noreferrer" class="catalogue-card">
-            <img src="/projects/keyboardanimation.png" alt="Keyboard Animation 3D" class="catalogue-card-img" draggable="false" oncontextmenu="return false;" />
+            <img src="/projects/keyboardanimation.png" alt="Keyboard Animation 3D" class="catalogue-card-img" width="600" height="375" draggable="false" oncontextmenu="return false;" />
             <div class="catalogue-card-overlay"></div>
             <div class="catalogue-card-content">
               <div class="catalogue-card-telemetry">
@@ -3191,7 +3342,7 @@
           <button class="faq-trigger" aria-expanded="true">
             <div class="faq-title-col">
               <span class="faq-proto-tag">PROTOCOL 01 // ARCHITECTURE</span>
-              <span class="faq-question-text">What exactly is an AIOS (Artificial Intelligence Operating System)?</span>
+              <span class="faq-question-text">What does an AI Automation Expert engineer for modern businesses?</span>
             </div>
             <div class="faq-icon-wrap" aria-hidden="true">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
@@ -3202,7 +3353,7 @@
           </button>
           <div class="faq-answer-panel" aria-hidden="false">
             <div class="faq-answer-content">
-              An <strong>AIOS</strong> is an integrated network of autonomous intelligence layers, sub-180ms real-time voice agents, and background orchestration workflows engineered to replace manual operational bottlenecks. Rather than fragmented chatbots or brittle zapier rules, an AIOS manages inbound customer triage, dynamic scheduling, instant CRM updates, and multi-tier business workflows with human-grade reasoning and zero latency fatigue.
+              As an <strong>AI Automation Expert</strong>, I build integrated networks of autonomous intelligence layers, sub-180ms real-time voice agents, and background automation workflows engineered to replace manual operational bottlenecks. Rather than fragmented chatbots or brittle Zapier rules, my bespoke AI automation systems manage inbound customer triage, dynamic scheduling, instant CRM updates, and multi-tier business workflows with human-grade reasoning and zero latency fatigue.
               
               <div class="faq-contact-card">
                 <div class="faq-contact-header">
@@ -3210,7 +3361,7 @@
                   <span>PROFESSIONAL CONTACT // DIRECT DISPATCH</span>
                 </div>
                 <div class="faq-contact-desc">
-                  To discuss enterprise AIOS architecture, evaluate operational automation roadmaps, or send messages directly to my engineering inbox:
+                  To consult with an AI Automation Expert, evaluate operational automation roadmaps, or send messages directly to my engineering inbox:
                 </div>
                 <a href="mailto:pennyworthxai@gmail.com" class="faq-contact-link" title="Direct Email to Hari">
                   ✉ pennyworthxai@gmail.com ↗
@@ -3342,7 +3493,14 @@
         <a href="mailto:pennyworthxai@gmail.com" class="crossing-email-link">pennyworthxai@gmail.com</a>
       </div>
       <div class="footer-credits hover-shader-target">
-        <span class="txt-red">HARI PRASAD</span> // <span class="txt-white">FOUNDER & AI ARCHITECT</span> // <span class="txt-black">ALL RIGHTS RESERVED</span>
+        <span class="txt-red">HARI PRASAD</span> // <span class="txt-white">AI AUTOMATION EXPERT & FOUNDER</span> // <span class="txt-black">ALL RIGHTS RESERVED</span>
+      </div>
+      <div class="footer-legal-links">
+        <a href="#faqs" class="legal-link">Privacy Policy</a>
+        <span class="legal-dot">·</span>
+        <a href="#faqs" class="legal-link">Terms of Service</a>
+        <span class="legal-dot">·</span>
+        <a href="#faqs" class="legal-link">Security Protocols</a>
       </div>
     </section>
   </main>

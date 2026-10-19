@@ -41,13 +41,13 @@ export function About() {
             </p>
 
             <p className="animate-on-scroll" data-delay="300">
-              At our startup, we specialize in building sophisticated{' '}
+              As an{' '}
               <strong className="text-white font-medium">
-                Artificial Intelligence Operating Systems (AIOS)
-              </strong>{' '}
-              and{' '}
+                AI Automation Expert
+              </strong>
+              , I specialize in building sophisticated{' '}
               <strong className="text-white font-medium">
-                Artificial Intelligence Orchestration Systems (AIOS)
+                Enterprise AI Automation Systems
               </strong>
               . As part of this infrastructure, we have architected and deployed several advanced
               voice agents tailored to handle specific operational pain points, allowing complex

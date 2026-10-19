@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>404 // ROUTE NOT FOUND — pennyworth.ai</title>
+  <meta name="description" content="404 - The requested transmission route does not exist." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&family=Space+Mono:wght@400;700&family=Syne:wght@700;800&display=swap" rel="stylesheet" />
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      background-color: #020206;
+      color: #ffffff;
+      font-family: 'Space Grotesk', sans-serif;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 2rem;
+      position: relative;
+      overflow: hidden;
+    }
+    body::before {
+      content: '';
+      position: absolute;
+      width: 500px;
+      height: 500px;
+      background: radial-gradient(circle, rgba(239, 68, 68, 0.15) 0%, transparent 70%);
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      pointer-events: none;
+      z-index: 0;
+    }
+    .hud-tag {
+      font-family: 'Space Mono', monospace;
+      font-size: 0.75rem;
+      letter-spacing: 0.2em;
+      color: #ef4444;
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+      position: relative;
+      z-index: 1;
+    }
+    .error-code {
+      font-family: 'Syne', sans-serif;
+      font-size: clamp(5rem, 15vw, 10rem);
+      font-weight: 800;
+      line-height: 1;
+      letter-spacing: -0.04em;
+      background: linear-gradient(180deg, #ffffff 30%, #52525b 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 1rem;
+      position: relative;
+      z-index: 1;
+    }
+    .error-message {
+      font-size: 1.15rem;
+      color: #a1a1aa;
+      max-width: 480px;
+      margin-bottom: 2.5rem;
+      line-height: 1.6;
+      position: relative;
+      z-index: 1;
+    }
+    .return-btn {
+      font-family: 'Space Mono', monospace;
+      font-size: 0.85rem;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      color: #ffffff;
+      text-decoration: none;
+      text-transform: uppercase;
+      padding: 0.9rem 1.8rem;
+      background: rgba(239, 68, 68, 0.18);
+      border: 1px solid #ef4444;
+      border-radius: 9999px;
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+      position: relative;
+      z-index: 1;
+    }
+    .return-btn:hover {
+      background: #ef4444;
+      color: #020206;
+      box-shadow: 0 0 30px rgba(239, 68, 68, 0.5);
+      transform: translateY(-2px);
+    }
+  </style>
+</head>
+<body>
+  <div class="hud-tag">TELEMETRY ERROR // CODE 404</div>
+  <h1 class="error-code">404</h1>
+  <p class="error-message">The requested transmission route does not exist or has been decommissioned by the neural core.</p>
+  <a href="/" class="return-btn">RETURN TO TRANSMISSION ↗</a>
+</body>
+</html>

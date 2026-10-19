@@ -48,8 +48,8 @@ export function HeroBlock() {
                 opacity: 0,
               }}
             >
-              Founder of pennyworth.ai. I build AI operating systems,
-              automation ecosystems, and premium web experiences that
+              Founder of pennyworth.ai & AI Automation Expert. I build autonomous
+              automation systems and premium web experiences that
               transform how businesses operate.
             </p>
 
